@@ -6,7 +6,7 @@ import { formatPrice } from "@/lib/utils";
 
 const MelonsSection: React.FC = () => {
   return (
-    <section className="py-20 px-4">
+    <section id="melons" className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-5xl md:text-6xl font-display font-bold text-white mb-6">

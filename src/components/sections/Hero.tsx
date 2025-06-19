@@ -4,7 +4,10 @@ import { GlassCard, Button } from "@/components/ui/GlassCard";
 
 const Hero: React.FC = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 pt-20">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center px-4 pt-20"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-6xl md:text-8xl font-display font-bold text-white mb-6 leading-tight">

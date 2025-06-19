@@ -8,12 +8,12 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "Our Melons", href: "/melons" },
-    { name: "NutriBot", href: "/nutribot" },
-    { name: "Blog", href: "/blog" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Home", href: "#hero" },
+    { name: "Our Melons", href: "#melons" },
+    { name: "NutriBot", href: "#nutribot" },
+    { name: "Blog", href: "#blog" },
+    // { name: "About", href: "#about" },
+    // { name: "Contact", href: "#contact" },
   ];
 
   return (
@@ -45,7 +45,7 @@ const Header: React.FC = () => {
 
           {/* Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <button className="text-white/80 hover:text-white transition-colors duration-200">
+            {/* <button className="text-white/80 hover:text-white transition-colors duration-200">
               <User className="w-5 h-5" />
             </button>
             <button className="text-white/80 hover:text-white transition-colors duration-200 relative">
@@ -53,7 +53,7 @@ const Header: React.FC = () => {
               <span className="absolute -top-2 -right-2 w-4 h-4 bg-melon-500 rounded-full text-xs text-white flex items-center justify-center">
                 2
               </span>
-            </button>
+            </button> */}
             <Button variant="primary" size="sm">
               Order Now
             </Button>
