@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* COLORS - Primary */
+  --color-primary-50: #f0fdf4;
+  --color-primary-100: #dcfce7;
+  --color-primary-200: #bbf7d0;
+  --color-primary-300: #86efac;
+  --color-primary-400: #4ade80;
+  --color-primary-500: #22c55e;
+  --color-primary-600: #16a34a;
+  --color-primary-700: #15803d;
+  --color-primary-800: #166534;
+  --color-primary-900: #14532d;
+
+  /* COLORS - Nature */
+  --color-nature-50: #f7fee7;
+  --color-nature-100: #ecfccb;
+  --color-nature-200: #d9f99d;
+  --color-nature-300: #bef264;
+  --color-nature-400: #a3e635;
+  --color-nature-500: #84cc16;
+  --color-nature-600: #65a30d;
+  --color-nature-700: #4d7c0f;
+  --color-nature-800: #3f6212;
+  --color-nature-900: #365314;
+
+  /* BACKDROP BLUR */
+  --backdrop-blur-xs: 2px;
+
+  /* ANIMATIONS */
+  --animation-float: float 6s ease-in-out infinite;
+  --animation-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  /* BACKGROUND IMAGES */
+  --background-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-gradient-conic: conic-gradient(
+    from 180deg at 50% 50%,
+    var(--tw-gradient-stops)
+  );
+  --background-nature-gradient: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 100%
+  );
+  --background-melon-gradient: linear-gradient(
+    135deg,
+    #ff9a9e 0%,
+    #fecfef 50%,
+    #fecfef 100%
+  );
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* KEYFRAMES */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  50% {
+    transform: translateY(-20px);
+  }
 }
