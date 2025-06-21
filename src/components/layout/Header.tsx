@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Menu, X, Leaf, ShoppingCart, User } from "lucide-react";
 import { GlassCard, Button } from "@/components/ui/GlassCard";
+import { openWhatsApp } from "@/lib/whatsapp";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -54,7 +55,16 @@ const Header: React.FC = () => {
                 2
               </span>
             </button> */}
-            <Button variant="primary" size="sm">
+            <Button
+              variant="primary"
+              size="sm"
+              onClick={() =>
+                openWhatsApp({
+                  phone: "6285210445912",
+                  message: "Halo! Saya tertarik membeli Premium Melon 🍈",
+                })
+              }
+            >
               Order Now
             </Button>
           </div>

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   Gauge,
@@ -9,6 +11,7 @@ import {
 } from "lucide-react";
 import { GlassCard, Button } from "@/components/ui/GlassCard";
 import { nutriBotFeatures } from "@/data";
+import { openWhatsApp } from "@/lib/whatsapp";
 
 const iconMap = {
   Gauge,
@@ -51,7 +54,16 @@ const NutriBotSection: React.FC = () => {
               parameters, ensuring your melons receive the perfect growing
               conditions 24/7.
             </p>
-            <Button size="lg" className="group">
+            <Button
+              size="lg"
+              className="group"
+              onClick={() =>
+                openWhatsApp({
+                  phone: "6285210445912",
+                  message: "Halo! Saya tertarik dengan NutriBot system",
+                })
+              }
+            >
               Get NutriBot System
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>

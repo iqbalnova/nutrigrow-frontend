@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import { ArrowRight, Zap, Leaf, Truck } from "lucide-react";
 import { GlassCard, Button } from "@/components/ui/GlassCard";
+import { openWhatsApp } from "@/lib/whatsapp";
 
 const Hero: React.FC = () => {
   return (
@@ -23,11 +26,29 @@ const Hero: React.FC = () => {
             <span className="text-melon-400 font-bold">16% Brix</span>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="group">
+            <Button
+              size="lg"
+              className="group"
+              onClick={() =>
+                openWhatsApp({
+                  phone: "6285210445912",
+                  message: "Halo! Saya tertarik membeli Premium Melon 🍈",
+                })
+              }
+            >
               Shop Premium Melons
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="secondary" size="lg">
+            <Button
+              variant="secondary"
+              size="lg"
+              onClick={() => {
+                const target = document.getElementById("nutribot");
+                if (target) {
+                  target.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
               Discover NutriBot
             </Button>
           </div>
