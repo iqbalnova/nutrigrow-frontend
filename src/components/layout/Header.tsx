@@ -97,7 +97,7 @@ const Header: React.FC = () => {
               ))}
               <div className="flex items-center justify-between pt-4">
                 <div className="flex items-center space-x-4">
-                  <button className="text-white/80 hover:text-white transition-colors duration-200">
+                  {/* <button className="text-white/80 hover:text-white transition-colors duration-200">
                     <User className="w-5 h-5" />
                   </button>
                   <button className="text-white/80 hover:text-white transition-colors duration-200 relative">
@@ -105,9 +105,18 @@ const Header: React.FC = () => {
                     <span className="absolute -top-2 -right-2 w-4 h-4 bg-melon-500 rounded-full text-xs text-white flex items-center justify-center">
                       2
                     </span>
-                  </button>
+                  </button> */}
                 </div>
-                <Button variant="primary" size="sm">
+                <Button
+                  variant="primary"
+                  size="sm"
+                  onClick={() =>
+                    openWhatsApp({
+                      phone: "6285210445912",
+                      message: "Halo! Saya tertarik membeli Premium Melon 🍈",
+                    })
+                  }
+                >
                   Order Now
                 </Button>
               </div>
