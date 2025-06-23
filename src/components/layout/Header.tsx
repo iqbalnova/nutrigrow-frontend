@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Menu, X, Leaf, ShoppingCart, User } from "lucide-react";
+import { Menu, X, Leaf } from "lucide-react";
 import { GlassCard, Button } from "@/components/ui/GlassCard";
 import { openWhatsApp } from "@/lib/whatsapp";
 
