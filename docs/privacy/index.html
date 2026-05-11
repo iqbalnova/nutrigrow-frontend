@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - iTokoh Mobile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1a2e;
+      --ink-soft: #4a4a6a;
+      --ink-muted: #8888aa;
+      --cream: #faf9f6;
+      --warm: #f5f0e8;
+      --accent: #c8965a;
+      --accent-light: #f0e6d3;
+      --rule: #e8e2d8;
+      --serif: 'Fraunces', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* ── Header strip ── */
+    .top-bar {
+      background: var(--ink);
+      padding: 12px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .top-bar .app-name {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: 18px;
+      color: var(--cream);
+      letter-spacing: 0.02em;
+    }
+    .top-bar .badge {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: 1px solid var(--accent);
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: var(--ink);
+      padding: 80px 40px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -80px;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200,150,90,0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    }
+    .hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+    .hero-eyebrow {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 28px; height: 1px;
+      background: var(--accent);
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(40px, 6vw, 62px);
+      font-weight: 300;
+      color: var(--cream);
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .hero-meta-item {
+      font-size: 13px;
+      color: var(--ink-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .hero-meta-item .dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ── Main layout ── */
+    .layout {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 64px 40px 80px;
+    }
+
+    /* ── Section ── */
+    .section {
+      margin-bottom: 56px;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+    .section:nth-child(1) { animation-delay: 0.05s; }
+    .section:nth-child(2) { animation-delay: 0.10s; }
+    .section:nth-child(3) { animation-delay: 0.15s; }
+    .section:nth-child(4) { animation-delay: 0.20s; }
+    .section:nth-child(5) { animation-delay: 0.25s; }
+    .section:nth-child(6) { animation-delay: 0.30s; }
+    .section:nth-child(7) { animation-delay: 0.35s; }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-number {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .section h2 {
+      font-family: var(--serif);
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 18px;
+      line-height: 1.25;
+    }
+
+    .section p {
+      font-size: 15px;
+      color: var(--ink-soft);
+      margin-bottom: 14px;
+      line-height: 1.85;
+    }
+
+    /* ── Permission cards ── */
+    .perm-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .perm-card {
+      background: var(--warm);
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .perm-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+    .perm-icon {
+      font-size: 22px;
+      line-height: 1;
+    }
+    .perm-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .perm-desc {
+      font-size: 12px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+
+    /* ── Service cards ── */
+    .service-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .service-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--warm);
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: 18px 20px;
+      transition: border-color 0.2s;
+    }
+    .service-item:hover { border-color: var(--accent); }
+    .service-logo {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #4285f4, #ea4335);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .service-info .service-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+    .service-info .service-desc {
+      font-size: 13px;
+      color: var(--ink-muted);
+    }
+
+    /* ── Divider ── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, var(--accent-light), var(--rule), var(--accent-light));
+      margin-bottom: 56px;
+    }
+
+    /* ── Contact block ── */
+    .contact-block {
+      background: var(--ink);
+      border-radius: 16px;
+      padding: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .contact-block .contact-left h3 {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--cream);
+      margin-bottom: 6px;
+    }
+    .contact-block .contact-left p {
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin: 0;
+    }
+    .contact-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent);
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 12px 24px;
+      border-radius: 8px;
+      transition: opacity 0.2s, transform 0.2s;
+      white-space: nowrap;
+    }
+    .contact-btn:hover { opacity: 0.85; transform: translateY(-1px); }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 28px 40px;
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    footer .footer-brand {
+      font-family: var(--serif);
+      font-size: 14px;
+      color: var(--ink-soft);
+    }
+    footer .footer-right {
+      font-size: 12px;
+      color: var(--ink-muted);
+    }
+
+    @media (max-width: 600px) {
+      .top-bar, .hero { padding-left: 24px; padding-right: 24px; }
+      .layout { padding: 48px 24px 64px; }
+      .contact-block { padding: 28px 24px; }
+      footer { padding: 24px; }
+      .perm-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="top-bar">
+    <span class="app-name">iTokoh</span>
+    <span class="badge">Mobile App</span>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Legal Document</div>
+      <h1>Privacy <em>Policy</em></h1>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="dot"></span> Effective January 1, 2026</div>
+        <div class="hero-meta-item"><span class="dot"></span> MeisyDevLab</div>
+        <div class="hero-meta-item"><span class="dot"></span> Last reviewed 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="layout">
+
+    <!-- Intro -->
+    <div class="section">
+      <div class="section-number">Introduction</div>
+      <h2>About This Policy</h2>
+      <p>iTokoh Mobile ("Application") is developed and maintained by MeisyDevLab ("Developer"). This Privacy Policy explains how the Application handles user information and the permissions it may request.</p>
+      <p>We believe in transparency. This document outlines everything you need to know about how your data is — and is not — used.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Data Collection -->
+    <div class="section">
+      <div class="section-number">01 — Data Collection</div>
+      <h2>Information Collection & Use</h2>
+      <p>The Application does not collect or publicly share personal user data. Access is restricted to authorized administrators using email and password authentication.</p>
+      <p>Any data entered into the Application is managed internally by the administrator of the service and is not shared with third parties outside of the services listed below.</p>
+    </div>
+
+    <!-- Permissions -->
+    <div class="section">
+      <div class="section-number">02 — Permissions</div>
+      <h2>Permissions Requested</h2>
+      <p>The Application may request the following device permissions to enable its core features:</p>
+      <div class="perm-grid">
+        <div class="perm-card">
+          <div class="perm-icon">📷</div>
+          <div class="perm-label">Camera</div>
+          <div class="perm-desc">For taking or uploading photos within the app</div>
+        </div>
+        <div class="perm-card">
+          <div class="perm-icon">📍</div>
+          <div class="perm-label">Location</div>
+          <div class="perm-desc">For location-related features and services</div>
+        </div>
+        <div class="perm-card">
+          <div class="perm-icon">🔔</div>
+          <div class="perm-label">Notifications</div>
+          <div class="perm-desc">For important in-app alerts and updates</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third-party -->
+    <div class="section">
+      <div class="section-number">03 — Third-Party Services</div>
+      <h2>External Services Used</h2>
+      <p>The Application integrates with Google Firebase services to support core functionality. These services may collect limited technical data per their own privacy policies.</p>
+      <div class="service-list">
+        <div class="service-item">
+          <div class="service-logo">🔔</div>
+          <div class="service-info">
+            <div class="service-name">Firebase Cloud Messaging (FCM)</div>
+            <div class="service-desc">Handles push notifications delivered to your device</div>
+          </div>
+        </div>
+        <div class="service-item">
+          <div class="service-logo">🛡️</div>
+          <div class="service-info">
+            <div class="service-name">Firebase Crashlytics</div>
+            <div class="service-desc">Monitors crash reports to improve app stability</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Security -->
+    <div class="section">
+      <div class="section-number">04 — Security</div>
+      <h2>Data Security</h2>
+      <p>MeisyDevLab takes reasonable and appropriate measures to protect application data and maintain the integrity of services provided to our users.</p>
+    </div>
+
+    <!-- Children -->
+    <div class="section">
+      <div class="section-number">05 — Age Restriction</div>
+      <h2>Children's Privacy</h2>
+      <p>The Application is not intended for children under the age of 13. We do not knowingly collect information from minors.</p>
+    </div>
+
+    <!-- Updates -->
+    <div class="section">
+      <div class="section-number">06 — Updates</div>
+      <h2>Changes to This Policy</h2>
+      <p>This Privacy Policy may be updated from time to time to reflect changes in our practices or applicable regulations. Any updates will be posted on this page with a revised effective date.</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Contact -->
+    <div class="contact-block">
+      <div class="contact-left">
+        <h3>Have questions?</h3>
+        <p>Reach out to MeisyDevLab directly</p>
+      </div>
+      <a href="mailto:iqbalnova707@gmail.com" class="contact-btn">
+        ✉ iqbalnova707@gmail.com
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <span class="footer-brand">iTokoh · MeisyDevLab</span>
+    <span class="footer-right">© 2026 MeisyDevLab. All rights reserved.</span>
+  </footer>
+
+</body>
+</html>
